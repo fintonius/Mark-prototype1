@@ -1,0 +1,38 @@
+@font-face {
+    font-family: 'HeaderFont';
+    src: url('./fonts/IntroHeadB-Trial-Base.otf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'BodyFont';
+    src: url('./fonts/Knockout-HTF51-Middleweight.otf') format('opentype');;
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'BodyFontItalic';
+    src: url('./fonts/Knockout-HTF51-Middleweight.otf') format('opentype');;
+    font-weight: normal;
+    font-style: italic;
+}
+body {
+    font-family: 'BodyFont', sans-serif;
+    background: black;
+    color: white;
+}
+header {
+    font-family: 'HeaderFont', sans-serif;
+    font-size: 1.5rem;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'HeaderFont', sans-serif;
+    font-weight: normal;
+    font-size: 2.2rem;
+}
+ul {
+    list-style: none;
+    font-family: 'HeaderFont', sans-serif;
+}
