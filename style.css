@@ -43,6 +43,7 @@ h1, h2, h3, h4, h5, h6 {
 p {
     font-family: 'BodyFont', sans-serif;
     font-size: clamp(1rem, 1.25vw, 1.25rem);
+    padding: .5rem;
 }
 #heroContent {
     display: grid;
@@ -86,6 +87,10 @@ ul {
     opacity: 1;
     transform: translateX(20px);
 }
+.projectContentHeading {
+    /* border: solid 1px green; */
+    text-align: center;
+}
 #projectContext {
     display: flex;
     flex-direction: column;
@@ -104,6 +109,7 @@ ul {
     font-family: 'HeaderFont', sans-serif;
 }
 main {
+    /* border: solid 1px blue;; */
     padding-top: 2rem;
     display: flex;
     flex-direction: column;
@@ -111,8 +117,12 @@ main {
     gap: 3rem;
 }
 .projectContent {
-    border: solid 1px red;
     display: grid;
-    width: 80%;
+    
+}
+.projectContentBody {
+    /* border: solid 1px red; */
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     justify-content: center;
 }
