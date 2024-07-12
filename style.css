@@ -89,7 +89,7 @@ ul {
 }
 .projectContentHeading {
     /* border: solid 1px green; */
-    text-align: center;
+    text-align: center
 }
 #projectContext {
     display: flex;
@@ -126,3 +126,34 @@ main {
     grid-template-columns: 1fr 1fr;
     justify-content: center;
 }
+
+.projectContentHeading {
+    /* border: solid 1px green; */
+    text-align: center; /* Center the text */
+    position: relative; /* Position for the pseudo-element */
+    margin-bottom: 1rem; /* Add some space for the line */
+}
+
+.projectContentHeading::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 1px;
+    background-color: lightgrey;
+    position: absolute;
+    bottom: -0.5rem; /* Position the line between heading and body */
+    left: 0;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer; /* Changes the cursor to the default arrow */
+    outline: none; /* Removes the outline on focus */
+  }
+  
+  a:hover, a:focus {
+    text-decoration: none;
+    color: grey;
+    cursor: pointer;
+    outline: none;
+  }
