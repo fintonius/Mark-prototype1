@@ -27,29 +27,43 @@ body {
     font-family: 'BodyFont', sans-serif;
     background: black;
     color: white;
-    width: 80%;
+    width: 95%;
     max-width: 1000px;
     margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    /* border: solid 1px green; */
 }
 header {
     font-family: 'HeaderFont', sans-serif;
     font-size: 1.5rem;
+    /* border: solid 1px yellow; */
 }
 h1, h2, h3, h4, h5, h6 {
     font-family: 'HeaderFont', sans-serif;
     font-weight: normal;
-    font-size: clamp(2rem, 4vw, 3rem);
+    /* font-size: clamp(2rem, 4vw, 3rem); */
 }
 p {
     font-family: 'BodyFont', sans-serif;
     font-size: clamp(1rem, 1.25vw, 1.25rem);
     padding: .5rem;
 }
+.projectContent {
+    /* border: solid 1px red; */
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    gap: 1rem;
+}
+nav {
+    /* border: solid 1px blue; */
+    padding: 1.5rem 0;
+}
 #heroContent {
     display: grid;
-    grid-template-columns: 1fr 2fr 1fr;
-    gap: 1.5rem;
-    padding: 3rem 0;
+    grid-template-columns: 2fr 1fr;
+    gap: .5rem;
+    padding: 1.5rem 0;
 }
 #poster {
     width: 100%;
@@ -61,7 +75,7 @@ ul {
     font-family: 'HeaderFont', sans-serif;
 }
 #pageLinks {
-    font-size: clamp(1.3rem, 2vw, 1.6rem);
+    font-size: clamp(1.1rem, 2vw, 1.3rem);
     display: flex;
     flex-direction: column;
     gap: 5px;
@@ -116,9 +130,9 @@ main {
     align-items: center;
     gap: 3rem;
 }
-.projectContent {
+.projectContentSection{
     display: grid;
-    
+    grid-template-columns: 1fr;
 }
 .projectContentBody {
     /* border: solid 1px red; */
@@ -127,23 +141,7 @@ main {
     justify-content: center;
 }
 
-.projectContentHeading {
-    /* border: solid 1px green; */
-    text-align: center; /* Center the text */
-    position: relative; /* Position for the pseudo-element */
-    margin-bottom: 1rem; /* Add some space for the line */
-}
 
-.projectContentHeading::after {
-    content: "";
-    display: block;
-    width: 100%;
-    height: 1px;
-    background-color: lightgrey;
-    position: absolute;
-    bottom: -0.5rem; /* Position the line between heading and body */
-    left: 0;
-}
 a {
     text-decoration: none;
     color: inherit;
