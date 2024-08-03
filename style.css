@@ -25,6 +25,7 @@
 body {
     padding-top: .5rem;
     font-family: 'BodyFont', sans-serif;
+    font-size: clamp(1rem, 1.1vw, 1.25rem);
     background: black;
     color: white;
     width: 95%;
@@ -46,10 +47,9 @@ h1, h2, h3, h4, h5, h6 {
 }
 p {
     font-family: 'BodyFont', sans-serif;
-    font-size: clamp(1rem, 1.25vw, 1.25rem);
     padding: .5rem;
 }
-.projectContent {
+.projectBody {
     /* border: solid 1px red; */
     display: grid;
     grid-template-columns: 1fr 5fr;
@@ -101,14 +101,33 @@ ul {
     opacity: 1;
     transform: translateX(20px);
 }
-.projectContentHeading {
-    /* border: solid 1px green; */
-    text-align: center
+.projectContext{
+    display: grid;
+    grid-template-columns: 1fr 2fr; /* Two columns: one for titles, one for information */
+    grid-template-rows: auto auto auto auto 1fr;
+    gap: 0; /* No gap between grid items */
+    border-top: 1px solid white; /* Top border for the whole grid */
+    border-bottom: 1px solid white; /* Bottom border for the whole grid */
 }
-#projectContext {
+.project-details {
+    border-top: 1px solid white; /* Top border for each cell */
+    border-right: 1px solid white; /* Right border for each cell */
+    border-bottom: 1px solid white; /* Bottom border for each cell */
     display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+    align-items: top;
+    padding: 0.5rem 0.5rem 0.8rem 0.5rem;
+}
+.project-details-title {
+    font-family: 'HeaderFont', sans-serif;
+    font-size: clamp(1.1rem, 1.1vw, 1.2rem);
+}
+.project-details-content {
+    font-size: clamp(1rem, 1.1vw, 1.25rem);
+    padding-right: .5rem;
+}
+.projectContext :last-child, 
+.projectContext :nth-last-child(2) {
+    border-bottom: none ;
 }
 .projectContextInfo {
     display: flex;
@@ -128,19 +147,45 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 3rem;
+    gap: 4rem;
+}
+/* THE MAIN CONTENT OF THE PROJECT PAGE */
+.projectContent {
+    /* border: solid 1px yellow; */
 }
 .projectContentSection{
+    /* border: solid 1px blue; */
     display: grid;
     grid-template-columns: 1fr;
+    width: 100%;
 }
-.projectContentBody {
-    /* border: solid 1px red; */
+.projectContentHeading {
+    /* border: solid 1px green; */
+    text-align: center;
+    margin-bottom: 1rem;
+}
+.projectContentText {
+    width: 90%;
+    margin: 0 auto;
+    margin-bottom: .5rem;
+    /* border: 1px solid lightblue; */
+    
+}
+.projectContentImages {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    justify-content: center;
+    gap: 1rem;
+    align-items: end;
+    max-width: 100%;
+    margin: 0 auto;
 }
 
+img {
+    /* border: 1px solid white; */
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+}
 
 a {
     text-decoration: none;
